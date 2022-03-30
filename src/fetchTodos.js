@@ -7,7 +7,7 @@ let todos;
 
 try {
   const results = await dynamoDB.scan({ TableName: "TodoTable"}).promise();
-  todos = results
+  todos = results.Items
 } catch (error) {
   console.log(error);
 }
