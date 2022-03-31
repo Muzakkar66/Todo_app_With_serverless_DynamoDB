@@ -37,6 +37,12 @@ functions:
       - http:
           path: /todo/{id}
           method: put
+  deleteTodo:
+    handler: src/deleteTodo.handler
+    events:
+      - http:
+          path: /todo/{id}
+          method: delete
 
 resources:
   Resources:
